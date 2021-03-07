@@ -1,4 +1,4 @@
-require('../node_modules/dotenv').config()
+require('dotenv').config()
 
 const events = require('events');
 const emitter = new events.EventEmitter();
