@@ -1,10 +1,12 @@
 {
-  "name": "faker",
+  "name": "node.js",
   "version": "1.0.0",
-  "description": "this is exam with faker",
+  "description": "practice with node.js",
   "main": "app.js",
   "dependencies": {
-    "faker": "^5.4.0"
+    "dotenv": "^8.2.0",
+    "faker": "^5.4.0",
+    "nodemailer": "^6.5.0"
   },
   "devDependencies": {},
   "scripts": {
