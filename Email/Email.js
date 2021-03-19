@@ -4,13 +4,13 @@ const events = require('events');
 const emitter = new events.EventEmitter();
 
 const nodemailer = require('nodemailer');
-
-//Transporter
+// console.log(process.env.EMAIL)
+// Transporter
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: process.env.EMAIL,
-        pass: process.env.PASSWORD
+        pass: process.env.PASWORD
     }
 });
 
@@ -57,4 +57,4 @@ emitter.on('product_deleted', data => {
     } )
 })
 
-emitter.emit('product_deleted')
+emitter.emit('product_created')
