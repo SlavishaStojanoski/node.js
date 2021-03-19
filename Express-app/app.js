@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const port = 3000
 
 app.get('/', (req, res) => {
     res.send(req.header('host'))
@@ -20,6 +21,6 @@ app.get('/', (req, res) => {
     res.send('this is PATCH method')
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('server work on port 3000')
 })
