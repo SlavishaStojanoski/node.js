@@ -2,12 +2,24 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-    res.send('Hello World!!')
+    res.send(req.header('host'))
 })
-    .get('/hehe', (req, res) => {
-        res.send('ruta hehe')
+    .get('/about', (req, res) => {
+        res.send(req.header('accept'))
+})
+    .get('/profil', (req, res) => {
+        res.send(req.header('user-agent'))
+})
+    .post('/post', (req, res) => {
+        res.send('this is POST method')
+})
+    .put('/put', (req, res) => {
+        res.send('this is PUT method')
+})
+    .patch('/patch', (req, res) => {
+    res.send('this is PATCH method')
 })
 
 app.listen(3000, () => {
-    console.log('serverot raboti na porta 3000')
+    console.log('server work on port 3000')
 })
